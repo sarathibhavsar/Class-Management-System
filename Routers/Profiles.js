@@ -12,6 +12,7 @@ router.route('/')
         res.status(400).json({ message: err }).send();
     }
 })
+
 .post(async (req, res) => {
     const Profile = new Profiles({
         UserID: req.body.UserID,
@@ -19,7 +20,8 @@ router.route('/')
         MiddleName: req.body.MiddleName,
         LastName: req.body.LastName,
         ContactNumber: req.body.ContactNumber,
-        EmailIDAddress: req.body.EmailIDAddress
+        EmailID: req.body.EmailID,
+        Address: req.body.Address
     });
 
     try {
@@ -29,6 +31,7 @@ router.route('/')
         res.json({ message: err });
     }
 })
+
 .patch( async (req, res) => {
     try {
         const updateProfile = await Profiles.updateMany({$set:{
@@ -44,6 +47,7 @@ router.route('/')
         res.json({ message: err });
     }
 })
+
 .delete(async (req, res) => {
     try {
         const removeProfile = await Profiles.remove();

@@ -36,6 +36,7 @@ router.route('/')
         res.json({ message: err });
     }
 })
+
 .delete(async (req, res) => {
     try {
         const removeClass = await Classes.remove();

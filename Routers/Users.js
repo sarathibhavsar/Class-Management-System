@@ -12,6 +12,7 @@ router.route('/')
         res.status(400).json({ message: err }).send();
     }
 })
+
 .post(async (req, res) => {
     const User = new Users({
         Username: req.body.Username,
@@ -28,9 +29,10 @@ router.route('/')
         res.json({ message: err });
     }
 })
+
 .patch( async (req, res) => {
     try {
-        const updateUser = await Users.updateMany({$set:{Validated:req.body.Validated}});
+        const updateUser = await Users.updateMany({$set:{Validated: req.body.Validated}});
         res.json(updateUser);
     } catch (err) {
         res.json({ message: err });
@@ -61,8 +63,6 @@ router.route('/:userId')
         const updateUser = await Users.updateOne({_id:req.params.userId},{
             $set:{ 
                 Password: req.body.Password,
-                MobileNumber: req.body.MobileNumber,
-                Role: req.body.Role,
                 Validated: req.body.Validated
             }});
         res.json(updateUser);

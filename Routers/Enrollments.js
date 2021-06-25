@@ -100,9 +100,7 @@ router.route('/getstudentcourses/:studentId')
                     as: "dataweneed",
                   },
                 },
-                // Deconstructs the array field from the
-                // input document to output a document
-                // for each element
+              
                 {
                     $unwind: "$dataweneed",
                 },

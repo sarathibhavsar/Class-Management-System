@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 //Connect to Database
 mongoose.Promise = Promise;
 mongoose.connect(process.env.DB_CONNECTION,  { useNewUrlParser: true, useUnifiedTopology: true}, () => {
-    console.log("Connected to DB");
+   // console.log("Connected to DB");
 });
 
 
@@ -32,5 +32,6 @@ app.use('/user',userRoter);
 app.use('/class',classRoter);
 app.use('/profile', Profile);
 app.use('/enrollment',classEnrollment);
+
 //Server Listening Port*/
 app.listen(process.env.PORT || 3000)
