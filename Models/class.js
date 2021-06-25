@@ -30,6 +30,6 @@ const ClassSchema = new Schema({
     timestamps: true
 })
 
-var Classes = mongoose.model('user', ClassSchema);
+var Classes = mongoose.model('class', ClassSchema);
 
 module.exports = Classes;

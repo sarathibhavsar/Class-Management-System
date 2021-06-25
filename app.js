@@ -21,11 +21,12 @@ mongoose.set('useCreateIndex', true);
 //Import Routes
 const userRoter = require('./Routers/Users');
 const classRoter = require('./Routers/Classes');
+const classProfile = require('./Routers/Profiles');
 
 //Middlewares
 app.use('/user',userRoter);
 app.use('/class',classRoter);
-
+app.use('/profile',classProfile);
 
 //Server Listening Port
 app.listen(process.env.PORT || 3000)

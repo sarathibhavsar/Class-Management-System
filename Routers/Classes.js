@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Classes = require('../Models/user');
+const Classes = require('../Models/class');
 
 //Accessing All at once
 router.route('/')
