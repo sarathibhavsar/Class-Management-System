@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const EnrollmentSchema = new Schema({
     ClassID: {              
-        type: String,
+        type: mongoose.Schema.ObjectId,
         required: true,
         default: ""
     },

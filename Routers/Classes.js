@@ -14,7 +14,7 @@ router.route('/')
 })
 .post(async (req, res) => {
     const Class = new Classes({
-        Classname: req.body.Classname,
+        ClassName: req.body.ClassName,
         ClassType: req.body.ClassType,
         ClassInstructor: req.body.ClassInstructor,
         ClassSubject: req.body.ClassSubject,
@@ -22,7 +22,7 @@ router.route('/')
     });
 
     try {
-        const saveClass = await Classes.save();
+        const saveClass = await Class.save();
         res.json(saveClass);
     } catch (err) {
         res.json({ message: err });
@@ -60,7 +60,7 @@ router.route('/:classId')
     try {
         const updateClass = await Classes.updateOne({_id:req.params.classId},{
             $set:{ 
-                Classname: req.body.Classname,
+                ClassName: req.body.ClassName,
                 ClassType: req.body.ClassType,
                 ClassInstructor: req.body.ClassInstructor,
                 ClassSubject: req.body.ClassSubject,

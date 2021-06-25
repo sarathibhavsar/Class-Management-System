@@ -2,10 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ClassSchema = new Schema({
-    Classname: {              
+    ClassName: {              
         type: String,
         required: true,
-        unique: true,
         default: ""
     },
     ClassType: {              
