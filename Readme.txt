@@ -6,4 +6,4 @@ npm install dotenv
 
 API ONLINE : https://classmanagementsystem.herokuapp.com
 
-Documentation: https://app.swaggerhub.com/apis/diwit98028/cms/1.0.0
+Documentation: https://app.swaggerhub.com/apis-docs/diwit98028/cms/1.0.0
